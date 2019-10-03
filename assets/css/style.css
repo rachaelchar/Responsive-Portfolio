@@ -1,0 +1,290 @@
+body {
+    /* I received help from Dave to get my background image to show up. The ../ is necessary to move back up a folder, and that is the part I was missing initially. */
+    background-image: url(../images/fresh_snow_@2X.png);
+    font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#header {
+    box-sizing: content-box;
+    border-bottom: 2px solid #dddddd;
+    height: 65px;
+    background-color: #ffffff;
+}
+
+#header::after {
+    display: block;
+}
+
+h1 {
+    background: #4aaaa5;
+    width: 25%;
+    min-width: 316px;
+    color: #ffffff;
+    padding: 15px;
+    margin: 0px;
+    margin-left: 15%;
+    margin-bottom: 25px;
+    text-align: center;
+    float: left;
+    font-family: "Georgia", Times, "Times New Roman", serif;
+    position: static;
+}
+
+.topnav {
+    font-family: "Georgia", Times, "Times New Roman", serif;
+    float: right;
+    color: #777777;
+    margin: 0;
+    margin-right: 15%;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+/* ? why does the color and text decoration change work when I alter it in "a" but not in ".topnav"? */
+a {
+    color: #777777;
+    text-decoration: none;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.left-border {
+    border-left: 1px solid #dddddd;
+}
+
+a:link {
+    color: #777777;
+}
+
+a:visited {
+    color: #777777;
+}
+
+a:hover {
+    color: #4aaaa5;
+}
+
+h2 {
+    font-family: "Georgia", Times, "Times New Roman", serif;
+    color: #4aaaa5;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+hr {
+    height: 2px;
+    border-color: #dddddd;
+    background-color: #dddddd;
+    margin-bottom: 25px;
+}
+
+/* Check against examples for boxes */
+#content, 
+#content2 {
+    box-sizing: content-box;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 960px; 
+    height: 50%;
+    margin: 0;
+    margin-left: 15%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    color: #777777;
+}
+
+#content3 {
+    box-sizing: content-box;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 960px; 
+    height: 50%;
+    margin: 0;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    color: #777777;
+    position: relative;
+}
+
+#profile-pic {
+    float: left;
+    margin: 0;
+    margin-right: 25px;
+}
+
+.bio-text {
+    float: left;
+    margin: 0;
+    width: 100%;
+    color: #777777;
+}
+
+/* Sticky foot tutorial taken from freecodecamp.org's Youtube video: https://www.youtube.com/watch?v=RApARNfPwsA&t=387s */
+/* Establishing the margin and height ensures that following changes will work correctly. */
+html,
+body {
+    height: 100%;
+    margin: 0%;
+}
+
+/* All content minus the footer is selected within this div and given a minimum height of 100%, which means that it will take up all height allowed within the screen it is displayed on, rather than the height depending on the content.  */
+.allcontent {
+    min-height: 100%;
+}
+
+/* This step creates a pseudo-element */
+.allcontent::after {
+    /* adding a string of content makes sure the element appears */
+    content: "";
+    /* Displaying as a block makes it take up the whole width of the screen */
+    display: block;
+    /* The video suggests bringing the footer up by setting negative margins equal to the height of the footer, but I found that unless I doubled the negative margin height, half of my footer was obscured. */
+    margin-bottom: -50px;
+}
+
+/* Establish a fixed height for the footer */
+.footer, 
+.allcontent::after {
+    height: 25px;
+}
+
+.footer {
+    clear: both;
+    background-color: #666666;
+    color: #cccccc;
+    font-size: 9px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 3px; 
+    border-top: 8px solid #4aaaa5;
+}
+
+#name, #email, #message
+    {
+    width: 100%;
+    padding: 10px;
+    /* I added the box-sizing attribute to keep the form fields from overflowing outside of the container. Source: https://www.youtube.com/watch?v=AmeTQHcsUgQ&t=59s */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    color: #777777;
+}
+
+#message {
+    min-height: 100px;
+}
+
+.button {
+    padding: 10px 20px 10px 20px;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color:#316f6b;
+}
+
+.textbox {
+    background-color: #4aaaa5;
+    color: #ffffff;
+    margin: 0;
+    width: 300px;
+    padding: 10px 0px;
+    text-align: center;
+    position: absolute;
+}
+
+.img {
+    margin: 25px 20px;
+    /* Source: https://alligator.io/css/cropping-images-object-fit/ */
+    /* Object-fit makes allows me to make the image 300px width without warping the picture. */
+    object-fit: cover;
+    height: 200px;
+    width: 300px;
+}
+
+.img-1 {
+    float: left;
+}
+
+.img-3 {
+    float: left;
+}
+
+.box-1, .box-4 {
+    top: 299px;
+}
+.box-4, .box-5 {
+    right: 320px;
+}
+
+.box-1, .box-2, .box-3 {
+    left: 40px;
+}
+
+.box-2, .box-5 {
+    top: 551px;
+}
+
+.box-3 {
+    top: 805px;
+}
+
+@media screen and (max-width: 980px) {
+    #content {
+        max-width:60%;
+    }
+
+    #content2 {
+        margin-left: 5%;
+        max-width:60%;
+    }
+
+    h1 {
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #content, #content2 {
+        max-width: 85%;
+        margin: 5%;
+    }
+
+    h1 {
+        margin-left: 5%;
+    }
+
+    .topnav {
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    h1 {
+        min-width: 100%;
+        margin: 0;
+    }
+    .topnav {
+        min-width: 100%;
+        margin: 0;
+        clear: both;
+        text-align: center;
+        margin-bottom: 2%;
+    }
+
+    #profile-pic {
+        margin: 0;
+        margin-bottom: 15px;
+        min-width: 100%;
+        clear: both;
+        height: auto;
+        
+    }
+}
