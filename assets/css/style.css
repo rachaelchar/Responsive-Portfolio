@@ -96,6 +96,7 @@ hr {
 
 #content3 {
     box-sizing: content-box;
+    float: left;
     background-color: #ffffff;
     padding: 20px;
     width: 768px; 
