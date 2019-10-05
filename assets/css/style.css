@@ -242,10 +242,10 @@ body {
 
 @media screen and (max-width: 980px) {
     #content, #content2 {
-        max-width:60%;
+        max-width: 85%;
     }
 
-    #content2, #content3 {
+    #content, #content2, #content3 {
         margin-left: 5%;
     }
 
@@ -261,7 +261,7 @@ body {
 @media screen and (max-width: 768px) {
     #content, #content2, #content3 {
         max-width: 85%;
-        margin: 5%;
+        margin-left: 5%;
     }
 
     h1 {
@@ -304,6 +304,10 @@ body {
     .portfolio-img {
         min-width: 100%;
         height: auto;
+    }
+
+    h1 {
+        position: static;
     }
 
 }
